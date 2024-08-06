@@ -1,0 +1,20 @@
+﻿<Window x:Class="ExpensesInf.Views.StartPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpensesInf.Views"
+        mc:Ignorable="d"
+        Title="StartPage" Height="200" Width="200" ResizeMode="CanMinimize">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Margin="3"   Content="Add Expenses" Command="{Binding AddExpensesCommand}"/>
+        <Button Grid.Row="1" Margin="3"  Content="Statistics" Command="{Binding ViewStatisticsCommand}"/>
+        <Button Grid.Row="2" Margin="3"   Content="View Expenses" Command="{Binding ViewChecksCommand }"/>
+    </Grid>
+</Window>

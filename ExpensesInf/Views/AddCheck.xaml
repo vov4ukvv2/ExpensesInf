@@ -1,0 +1,30 @@
+﻿<Window x:Class="ExpensesInf.Views.AddCheck"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpensesInf.Views"
+        mc:Ignorable="d"
+        Title="Add  new check" Height="150" Width="300" ResizeMode="CanMinimize">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Description" Grid.Row="0" Grid.Column="0" Margin="0,5,0,0" />
+        <TextBox Text="{Binding DescriptionText}" Grid.Row="0" Margin="0,5,0,0" Grid.Column="1"/>
+        <TextBlock Text="Amount" Grid.Row="1" Grid.Column="0" Margin="0,5,0,0"/>
+        <TextBox Text="{Binding AmountText}" Grid.Row="1" Grid.Column="1" Margin="0,5,0,0"/>
+        <TextBlock Text="Type" Grid.Row="2" Grid.Column="0" Margin="0,5,0,0"/>
+        <ComboBox ItemsSource="{Binding ChartItemSource}"  Margin="0,5,0,0" SelectedItem="{Binding SelectedChart,Mode=TwoWay}" Grid.Column="1" Grid.Row="2"/>
+        <Button Content="{Binding AddEditCheck}" HorizontalAlignment="Right" Command="{Binding AddNewCheckCommand}" Grid.Column="1" Grid.Row="5"/>
+        
+    </Grid>
+</Window>

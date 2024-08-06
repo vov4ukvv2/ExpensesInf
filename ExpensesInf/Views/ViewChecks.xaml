@@ -1,0 +1,28 @@
+﻿<Window x:Class="ExpensesInf.Views.ViewChecks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpensesInf.Views"
+        mc:Ignorable="d"
+        Title="List Checks" Height="450" Width="800">
+    <Grid>
+        <ListBox ItemsSource="{Binding Checks}" SelectedItem="{Binding SelectedCheck}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Amount}" Margin="5"/>
+                        <TextBlock Text="{Binding Date}" Margin="5"/>
+                        <TextBlock Text="{Binding Description}" Margin="5"/>
+                        <TextBlock Text="{Binding Type}" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Content="Add" Command="{Binding AddCheckCommand}" Margin="5"/>
+            <Button Content="Edit" Command="{Binding EditCheckCommand}" Margin="5" IsEnabled="{Binding SelectedCheck, Converter={StaticResource NullToBoolConverter}}"/>
+            <Button Content="Delete" Command="{Binding DeleteCheckCommand}" Margin="5" IsEnabled="{Binding SelectedCheck, Converter={StaticResource NullToBoolConverter}}"/>
+        </StackPanel>
+    </Grid>
+</Window>
