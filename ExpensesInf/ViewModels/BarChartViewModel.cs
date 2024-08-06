@@ -105,8 +105,8 @@ namespace ExpensesInf.ViewModels
                                     }).ToList();
 
             ExpensePlotModel = new PlotModel { Title = "Expenses" };
-            var categoryAxis = new CategoryAxis { Position = AxisPosition.Left };  // Now CategoryAxis on Y axis
-            var valueAxis = new LinearAxis { Position = AxisPosition.Bottom, Title = "Amount" }; // LinearAxis on X axis
+            var categoryAxis = new CategoryAxis { Position = AxisPosition.Left };  
+            var valueAxis = new LinearAxis { Position = AxisPosition.Bottom, Title = "Amount" }; 
 
             var barSeries = new BarSeries { Title = "Expenses", FillColor = OxyColors.SkyBlue };
 
