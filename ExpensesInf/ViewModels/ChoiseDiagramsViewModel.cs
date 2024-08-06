@@ -42,7 +42,7 @@ namespace ExpensesInf.ViewModels
         #region Methods
         public ChoiseDiagramsViewModel()
         {
-            ChartItemSource = new ObservableCollection<String> { "LineСhart", "BarСhart", "PieСhart" };
+            ChartItemSource = new ObservableCollection<String> {  "BarСhart", "PieСhart" };
             SelectedChart = ChartItemSource.First();
             OpenDiagramsCommand = new RelayCommand(ExecuteAction);
         }
@@ -51,15 +51,14 @@ namespace ExpensesInf.ViewModels
 
             switch (ChartItemSource.IndexOf(SelectedChart))
             {
+            
                 case 0:
-                    break;
-                case 1:
                     BarChart barChart = new BarChart();
                     Application.Current.MainWindow.Close();
                     barChart.Show();
                     
                     break;
-                case 2:
+                case 1:
                     StatisticsView statisticsView = new StatisticsView();
                     Application.Current.MainWindow.Close();
                     statisticsView.Show();

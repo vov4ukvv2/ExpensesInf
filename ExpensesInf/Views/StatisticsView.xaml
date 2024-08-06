@@ -7,7 +7,7 @@
         ResizeMode="CanMinimize"
       mc:Ignorable="d"
        xmlns:oxy="http://oxyplot.org/wpf" xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-        Title="StatisticsView" Height="500" Width="800">
+        Title="Pie Chart" Height="500" Width="800">
     
     <Grid>
         <Grid.RowDefinitions>

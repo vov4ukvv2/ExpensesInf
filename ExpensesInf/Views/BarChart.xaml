@@ -7,7 +7,7 @@
         xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="BarChart" Height="500" Width="800" ResizeMode="CanMinimize">
+        Title="Bar Chart" Height="500" Width="800" ResizeMode="CanMinimize">
 
     <Grid>
         <Grid.RowDefinitions>
